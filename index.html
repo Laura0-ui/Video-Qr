@@ -4,43 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Video</title>
-
 <style>
 html,body{
     margin:0;
     width:100%;
     height:100%;
     background:#000;
-    overflow:hidden;
 }
-
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 video{
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
     object-fit:contain;
-    background:#000;
 }
 </style>
-
 </head>
-
 <body>
 
-<video
-    autoplay
-    playsinline
-    controls
-    preload="auto">
-    <source src="video.mp4" type="video/mp4">
+<video autoplay muted playsinline controls>
+    <source src="./video.mp4" type="video/mp4">
+    Tu navegador no soporta video.
 </video>
-
-<script>
-const video=document.querySelector("video");
-
-video.play().catch(()=>{
-    console.log("El navegador requiere un toque para iniciar el video.");
-});
-</script>
 
 </body>
 </html>
